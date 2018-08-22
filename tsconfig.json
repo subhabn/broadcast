@@ -1,0 +1,29 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "es5",
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"lib": [
+			"es2017",
+			"dom"
+		],
+		"paths": {
+			"@blackline/runestone": [
+				// "dist/runestone" // This is recommended to refrence built package from playground app. Before, pull request, please make sure this option works properly.
+				"projects/runestone/src/public_api.ts" // This is easier to use during development refrence src of package from playground app.
+			],
+			"@app/*": [
+				"src/app/*"
+			],
+		}
+	}
+}
